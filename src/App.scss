@@ -20,11 +20,21 @@
 html {
   font-size: 16px;
   cursor: none;
+  @media (max-width: 1024px) {
+    cursor: auto;
+  }
+}
+
+body {
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
   cursor: none;
+  @media (max-width: 1024px) {
+    cursor: pointer;
+  }
 }
 
 //custom cursor
@@ -40,6 +50,9 @@ a {
   transition: all 0.3s ease-in-out;
   transition-property: transform, background-color;
   will-change: transform, background-color;
+  @media (max-width: 1024px) {
+    display: none;
+  }
 }
 
 .active-cursor {
