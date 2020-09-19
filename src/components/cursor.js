@@ -27,11 +27,6 @@ const Cursor = () => {
     link.addEventListener("mouseleave", cursorUnhover);
   });
 
-  if (document.body.clientWidth < 1280) {
-    mouseCursor.style.display = "none";
-    document.body.style.cursor = "auto";
-  }
-
   useEffect(() => {
     document.addEventListener("mousemove", onMouseMove);
     return () => {
