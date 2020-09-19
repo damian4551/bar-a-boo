@@ -1,0 +1,42 @@
+.restaurant-menu {
+  height: 30vh;
+  margin-bottom: 50px;
+  @media (max-width: 1024px) {
+    height: 20vh;
+    margin-bottom: 30px;
+  }
+  @media (max-width: 750px) {
+    display: none;
+  }
+  .restaurant-inner-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    a {
+      text-decoration: none;
+      color: $black;
+      margin: 0px 50px;
+      font-family: $poppins;
+      font-weight: 400;
+      text-align: center;
+      position: relative;
+      transition: color 0.3s ease-in-out;
+      @media (max-width: 1024px) {
+        margin: 0 35px;
+      }
+      &:hover {
+        color: $green;
+      }
+      .restaurant-block {
+        .city {
+          font-size: calc(0.5rem + 1.3vw);
+          text-transform: uppercase;
+        }
+        .name {
+          font-size: calc(0.5rem + 0.8vw);
+        }
+      }
+    }
+  }
+}

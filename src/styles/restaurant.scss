@@ -1,0 +1,150 @@
+.restaurant {
+  margin-bottom: calc(1rem + 4vw);
+  position: relative;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 45vw;
+    height: 28vh;
+    background-color: $grey;
+    top: 0;
+    right: 0;
+    margin: 100px 0;
+    z-index: -1;
+    @media (max-width: 1280px) {
+      width: 35vw;
+      height: 18vh;
+    }
+    @media (max-width: 650px) {
+      display: none;
+    }
+  }
+  .restaurant-inner {
+    height: calc(15rem + 20vw);
+    width: 100vw;
+    display: flex;
+    padding: 0 50px;
+    @media (max-width: 1024px) {
+      padding: 30px;
+    }
+    @media (max-width: 420px) {
+      height: calc(10rem + 7vw);
+      padding: 10px 20px;
+      margin-bottom: 20px;
+    }
+    .img-link {
+      flex: 11;
+      height: calc(15rem + 20vw);
+      text-decoration: none;
+      @media (max-width: 1280px) {
+        flex: 3;
+        height: calc(15rem + 15vw);
+      }
+      @media (max-width: 650px) {
+        order: 2;
+        flex: 2;
+        height: calc(15rem + 7vw);
+      }
+      @media (max-width: 420px) {
+        display: none;
+      }
+      .restaurant-img {
+        height: 100%;
+        width: 100%;
+        .img {
+          height: 100%;
+          width: 100%;
+          background-size: cover;
+        }
+      }
+    }
+    .restaurant-info {
+      flex: 12;
+      height: calc(15rem + 20vw);
+      padding: 50px;
+      padding-left: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @media (max-width: 1280px) {
+        flex: 2;
+        height: calc(15rem + 15vw);
+      }
+      @media (max-width: 650px) {
+        order: 1;
+        flex: 2;
+        padding: 0;
+        height: calc(15rem + 7vw);
+      }
+      @media (max-width: 420px) {
+        height: calc(10rem + 7vw);
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .localization {
+        display: flex;
+        flex-direction: column;
+        font-family: $krona;
+        color: $black;
+        .city {
+          font-size: calc(1rem + 3.2vw);
+        }
+        .street {
+          font-size: calc(1rem + 1.5vw);
+        }
+      }
+      .social {
+        display: flex;
+        flex-direction: column;
+        a {
+          text-decoration: none;
+          font-family: $poppins;
+          font-size: calc(0.5rem + 1vw);
+          color: $black;
+        }
+        @media (max-width: 420px) {
+          margin-top: 20px;
+        }
+      }
+      .reservation {
+        text-decoration: none;
+        position: relative;
+        width: 20vw;
+        height: 5vh;
+        overflow: hidden;
+        background-color: $black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: 1280px) {
+          height: 4vh;
+        }
+        @media (max-width: 420px) {
+          width: 25vw;
+          margin-top: 20px;
+        }
+        .text-reservation,
+        .phone {
+          position: absolute;
+          font-family: $poppins;
+          font-size: calc(0.5rem + 1vw);
+          color: $white;
+          transition: transform 0.4s ease-in-out;
+        }
+        .phone {
+          transform: translateY(-150%);
+        }
+        &:hover .text-reservation {
+          transform: translateY(150%);
+        }
+        &:hover .phone {
+          transform: translateY(0%);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-top: calc(0.5rem + 3vw);
+  padding-bottom: 20px;
+  font-family: $poppins;
+  font-size: calc(0.5rem + 0.65vw);
+}
