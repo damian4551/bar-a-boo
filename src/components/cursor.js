@@ -10,7 +10,7 @@ const Cursor = () => {
   const mouseCursor = document.querySelector(".cursor");
 
   const onMouseMove = (e) => {
-    const { pageX: x, pageY: y } = e;
+    const { clientX: x, clientY: y } = e;
     setMousePosition({ x, y });
   };
 
