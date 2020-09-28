@@ -1,10 +1,12 @@
 import React from "react";
 
+import MovingBar from "./movingBar";
+
 const About = () => {
   return (
     <div className="about" id="about">
       <div className="about-inner">
-        <div className="row">
+        <div className="row left">
           <div className="block-text">
             <h3 className="title">O nas</h3>
             <p className="text left">
@@ -13,14 +15,9 @@ const About = () => {
               nawet najbardziej wymagającym gustom.
             </p>
           </div>
-          <div className="img-block right">
-            <div className="img-right" />
-          </div>
         </div>
-        <div className="row">
-          <div className="img-block left">
-            <div className="img-left" />
-          </div>
+        <MovingBar />
+        <div className="row right">
           <div className="block-text">
             <p className="text right">
               Nasza kuchnia to mieszanka tradycji kulturowych i kulinarnych,

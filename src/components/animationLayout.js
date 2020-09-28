@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const AnimationLayout = () => {
-  const transition = { duration: 1.2, ease: [0.6, -0.05, 0.01, 0.9] };
+  const transition = { duration: 1.6, ease: [0.6, -0.05, 0.01, 0.9] };
   const leftPanel = {
     initial: {
       height: "100vh",

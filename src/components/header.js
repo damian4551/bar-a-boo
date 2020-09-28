@@ -104,12 +104,6 @@ const Header = ({
             </Link>
           </ul>
         </nav>
-        <div className="hamburger">
-          <div className="hamburger-inner">
-            <span></span>
-            <span></span>
-          </div>
-        </div>
       </div>
     </motion.div>
   );

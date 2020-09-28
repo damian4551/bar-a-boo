@@ -8,6 +8,7 @@ const Cursor = () => {
 
   const links = document.querySelectorAll("a");
   const mouseCursor = document.querySelector(".cursor");
+  const foodItems = document.querySelectorAll(".food-item");
 
   const onMouseMove = (e) => {
     const { clientX: x, clientY: y } = e;
@@ -22,9 +23,21 @@ const Cursor = () => {
     mouseCursor.classList.remove("active-cursor");
   };
 
+  const cursorPasta = () => {
+    mouseCursor.classList.add("pasta-cursor");
+  };
+  const cursorUnPasta = () => {
+    mouseCursor.classList.remove("pasta-cursor");
+  };
+
   links.forEach((link) => {
     link.addEventListener("mouseenter", cursorHover);
     link.addEventListener("mouseleave", cursorUnhover);
+  });
+
+  foodItems.forEach((item) => {
+    item.addEventListener("mouseenter", cursorPasta);
+    item.addEventListener("mouseleave", cursorUnPasta);
   });
 
   useEffect(() => {
@@ -38,8 +51,8 @@ const Cursor = () => {
     <div
       className="cursor"
       style={{
-        top: `${mousePosition.y - 12}px`,
-        left: `${mousePosition.x - 12}px`,
+        top: `${mousePosition.y}px`,
+        left: `${mousePosition.x}px`,
       }}
     ></div>
   );

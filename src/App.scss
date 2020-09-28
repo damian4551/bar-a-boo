@@ -4,7 +4,6 @@
 @import "./styles/about.scss";
 @import "./styles//movingBar.scss";
 @import "./styles/menu.scss";
-@import "./styles//gallery.scss";
 @import "./styles//restaurant.scss";
 @import "./styles//restaurantMenu.scss";
 @import "./styles//footer.scss";
@@ -42,14 +41,15 @@ a {
   position: fixed;
   height: 24px;
   width: 24px;
+  transform: translate(-50%, -50%);
   background-color: transparent;
   border: 3px solid $green;
   border-radius: 50px;
   z-index: 100;
   pointer-events: none;
   transition: all 0.3s ease-in-out;
-  transition-property: transform, background-color;
-  will-change: transform, background-color;
+  transition-property: transform, background-color, position;
+  will-change: transform, background-color, position;
   @media (max-width: 1024px) {
     display: none;
   }
@@ -58,4 +58,13 @@ a {
 .active-cursor {
   transform: scale(1.3);
   background-color: $green;
+}
+
+.pasta-cursor {
+  height: 300px;
+  width: 250px;
+  border: none;
+  border-radius: 0;
+  //background-image: url("./assets/g1.jpg");
+  background-size: cover;
 }
