@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 //components
 import Header from "../components/header";
@@ -14,11 +14,24 @@ import AnimationLayout from "../components/animationLayout";
 import Cursor from "../components/cursor";
 
 const Home = () => {
+  const [displayHeader, setDisplayHeader] = useState(false);
+
+  window.addEventListener("scroll", function () {
+    window.pageYOffset > window.innerHeight
+      ? setDisplayHeader(true)
+      : setDisplayHeader(false);
+  });
+
+  useEffect(() => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  }, []);
+
   return (
     <>
       <AnimationLayout />
       <Cursor />
-      <Header displayRestaurants="none" />
+      <Header displayRestaurants="none" displayHeader={displayHeader} />
       <Banner />
       <About />
       <MovingBar />

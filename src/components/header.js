@@ -1,14 +1,40 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Link as SectionLink } from "react-scroll";
+import { motion } from "framer-motion";
 
-const Header = ({ position, displayRestaurants, displayNavigation }) => {
+const Header = ({
+  position,
+  displayRestaurants,
+  displayNavigation,
+  displayHeader,
+  newColors,
+}) => {
   return (
-    <div className="header" style={{ position: position }}>
+    <motion.div
+      className="header"
+      initial={{ y: "-100%" }}
+      animate={displayHeader === true ? { y: "0%" } : { y: "-100%" }}
+      transition={{ duration: 0.8, ease: [0.6, -0.05, 0.01, 0.9] }}
+      style={{
+        position: position,
+        backgroundColor: newColors === true && "transparent",
+      }}
+    >
       <div className="inner-header">
         <Link to="/" className="logo">
-          <h6 className="logo-1">bar a boo</h6>
-          <h6 className="logo-2">bar a boo</h6>
+          <h6
+            className="logo-1"
+            style={{ color: newColors === true && "#fff" }}
+          >
+            bar a boo
+          </h6>
+          <h6
+            className="logo-2"
+            style={{ color: newColors === true && "#fff" }}
+          >
+            bar a boo
+          </h6>
         </Link>
         <nav style={{ display: displayNavigation }}>
           <ul className="navigation-list">
@@ -20,7 +46,12 @@ const Header = ({ position, displayRestaurants, displayNavigation }) => {
               offset={-70}
               duration={500}
             >
-              <li className="navigation-item">o nas</li>
+              <li
+                className="navigation-item"
+                style={{ color: newColors === true && "#fff" }}
+              >
+                o nas
+              </li>
             </SectionLink>
             <SectionLink
               activeClass="active"
@@ -30,7 +61,12 @@ const Header = ({ position, displayRestaurants, displayNavigation }) => {
               offset={-70}
               duration={500}
             >
-              <li className="navigation-item">menu</li>
+              <li
+                className="navigation-item"
+                style={{ color: newColors === true && "#fff" }}
+              >
+                menu
+              </li>
             </SectionLink>
             <SectionLink
               activeClass="active"
@@ -40,7 +76,12 @@ const Header = ({ position, displayRestaurants, displayNavigation }) => {
               offset={-70}
               duration={500}
             >
-              <li className="navigation-item">restauracje</li>
+              <li
+                className="navigation-item"
+                style={{ color: newColors === true && "#fff" }}
+              >
+                restauracje
+              </li>
             </SectionLink>
           </ul>
         </nav>
@@ -70,7 +111,7 @@ const Header = ({ position, displayRestaurants, displayNavigation }) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

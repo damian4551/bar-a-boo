@@ -27,7 +27,7 @@ const Restaurant = ({
     <>
       <AnimationLayout />
       <Cursor />
-      <Header position="static" displayNavigation="none" />
+      <Header position="static" displayNavigation="none" displayHeader={true} />
       <RestaurantCard
         city={city}
         name={name}
