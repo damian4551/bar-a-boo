@@ -9,9 +9,16 @@ const RestaurantCard = ({
   instagram,
   phone,
   background,
+  styles,
 }) => {
   return (
-    <div className="restaurant">
+    <div
+      className="restaurant"
+      style={{
+        padding: styles === true && "0",
+        marginTop: styles === true && "calc(1rem + 4vw)",
+      }}
+    >
       <div className="restaurant-inner">
         <Link to={path} className="img-link">
           <div className="restaurant-img">

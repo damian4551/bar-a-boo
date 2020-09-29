@@ -4,9 +4,9 @@ import MovingBar from "./movingBar";
 
 const About = () => {
   return (
-    <div className="about" id="about">
+    <div className="about">
       <div className="about-inner">
-        <div className="row left">
+        <div className="row left" id="about">
           <div className="block-text">
             <h3 className="title">O nas</h3>
             <p className="text left">

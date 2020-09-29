@@ -1,7 +1,9 @@
 .menu {
+  padding-top: calc(1rem + 7vw);
   .inner-menu {
     display: flex;
     justify-content: center;
+    padding: 50px 0;
     a {
       font-family: $playfair;
       font-size: calc(0.5rem + 1vw);
@@ -55,19 +57,6 @@
     transform: translateX(-50%);
     @media (max-width: 500px) {
       max-width: 80vw;
-    }
-    &::before {
-      content: "";
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      background-color: $grey;
-      left: calc(0px - (1rem + 4vw));
-      top: calc(0px - (1rem + 4vw));
-      z-index: -1;
-      @media (max-width: 500px) {
-        display: none;
-      }
     }
     video {
       height: 100%;

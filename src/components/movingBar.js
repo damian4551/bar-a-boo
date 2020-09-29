@@ -2,7 +2,7 @@ import React from "react";
 
 const MovingBar = () => {
   return (
-    <div className="bar" id="menu">
+    <div className="bar">
       <div className="inner-bar">
         <div className="text-block outside">
           <h2 className="text outside">

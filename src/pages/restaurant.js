@@ -36,6 +36,7 @@ const Restaurant = ({
         phone={phone}
         background={background}
         path={path}
+        styles={true}
       />
       <Hours hours={hours} street={street} phone={phone} email={email} />
       <Map cords={cords} />

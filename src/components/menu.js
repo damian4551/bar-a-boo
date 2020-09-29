@@ -3,7 +3,7 @@ import Video from "../assets/video.mp4";
 
 const Menu = () => {
   return (
-    <div className="menu">
+    <div className="menu" id="menu">
       <div className="inner-menu">
         <a href="http://www.baraboo.pl/menu,76.html">
           <div className="btn-block">sprawdź nasze menu </div>
