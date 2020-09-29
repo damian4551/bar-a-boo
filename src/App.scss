@@ -39,8 +39,8 @@ a {
 //custom cursor
 .cursor {
   position: fixed;
-  height: 24px;
-  width: 24px;
+  height: 30px;
+  width: 30px;
   transform: translate(-50%, -50%);
   background-color: transparent;
   border: 3px solid $green;
@@ -56,15 +56,43 @@ a {
 }
 
 .active-cursor {
-  transform: scale(1.3);
   background-color: $green;
 }
 
-.pasta-cursor {
+.pasta-cursor,
+.breakfast-cursor,
+.soup-cursor,
+.salad-cursor,
+.dessert-cursor,
+.alcohol-cursor {
   height: 300px;
   width: 250px;
   border: none;
   border-radius: 0;
-  //background-image: url("./assets/g1.jpg");
   background-size: cover;
+  background-position: center;
+}
+
+.pasta-cursor {
+  background-image: url("./assets/cursor/pasta.jpg");
+}
+
+.breakfast-cursor {
+  background-image: url("./assets/cursor/breakfast.jpg");
+}
+
+.soup-cursor {
+  background-image: url("./assets/cursor/soup.jpg");
+}
+
+.salad-cursor {
+  background-image: url("./assets/cursor/salad.jpg");
+}
+
+.dessert-cursor {
+  background-image: url("./assets/cursor/dessert.jpg");
+}
+
+.alcohol-cursor {
+  background-image: url("./assets/cursor/alcohol.jpg");
 }
