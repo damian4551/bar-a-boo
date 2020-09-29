@@ -14,6 +14,7 @@ const RestaurantCard = ({
   return (
     <div
       className="restaurant"
+      id="restaurants"
       style={{
         padding: styles === true && "0",
         marginTop: styles === true && "calc(1rem + 4vw)",

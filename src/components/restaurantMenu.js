@@ -5,7 +5,7 @@ import { RestaurantContext } from "../context";
 const RestaurantMenu = () => {
   const restaurantInfo = useContext(RestaurantContext);
   return (
-    <div className="restaurant-menu" id="restaurants">
+    <div className="restaurant-menu">
       <div className="restaurant-inner-menu">
         {restaurantInfo.map(({ city, name, path }) => (
           <Link to={path} key={name}>
